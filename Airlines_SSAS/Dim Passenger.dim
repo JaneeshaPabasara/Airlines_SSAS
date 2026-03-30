@@ -6,6 +6,32 @@
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1472" scrolltop="-3620" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6392" y="10986" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimPassenger" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3408" height="3747" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000500d0000a30e0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimPassenger" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -21,15 +47,15 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>0</Value>
+      <Value>-1472</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>0</Value>
+      <Value>-3620</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-      <Value>0</Value>
+      <Value>20</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -67,7 +93,146 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="a7065c54-b3f0-4514-822f-499f725860a8">
+          <AttributeID>Passenger Id</AttributeID>
+          <Name>Passenger Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5a8252b9-0394-4691-ba74-f985bec326a4">
+          <AttributeID>Passenger Name</AttributeID>
+          <Name>Passenger Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="760eca6c-2075-4f03-8321-d08526f41c67">
+          <AttributeID>Contact Data</AttributeID>
+          <Name>Contact Data</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1fd26bb0-821d-459a-8786-78ec1d925979">
+          <AttributeID>Travel Tier</AttributeID>
+          <Name>Travel Tier</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="640f1c0b-6eca-4746-aa91-ade75b005052">
+          <AttributeID>Is Current</AttributeID>
+          <Name>Is Current</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2c075ad5-8d60-4e14-aec5-ff65ce14d50b">
+          <AttributeID>Effective Date</AttributeID>
+          <Name>Effective Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="429187d3-c0fc-4784-9d7c-f27eff5ff79a">
+          <AttributeID>Expiry Date</AttributeID>
+          <Name>Expiry Date</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
       <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="57af583d-da87-4751-b17a-970a979433e5">
+      <ID>Passenger Id</ID>
+      <Name>Passenger Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9ff72d63-7a73-424d-be26-f24fe2a056a0">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f7536bfd-dfa8-4faf-98bb-3e9410712883">
+            <TableID>dbo_DimPassenger</TableID>
+            <ColumnID>passenger_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2b0ee748-513a-437d-a647-1a759c5672fc">
+      <ID>Passenger Name</ID>
+      <Name>Passenger Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f09066c3-59c9-43a8-8a4d-42a8e99ea07f">
+          <DataType>WChar</DataType>
+          <DataSize>200</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="274a69a3-2b40-4e3b-a2e6-3111daa2d335">
+            <TableID>dbo_DimPassenger</TableID>
+            <ColumnID>passenger_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="71c265e4-fd6d-4642-84bf-a169b7f72e1b">
+      <ID>Contact Data</ID>
+      <Name>Contact Data</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6d01c7cb-5007-4cdd-b8f9-51879123824a">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="259f83b3-e7af-497b-9468-0449a0d28e8e">
+            <TableID>dbo_DimPassenger</TableID>
+            <ColumnID>contact_data</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6fafb2bd-8b82-4cf6-947f-cd67ed868b8f">
+      <ID>Travel Tier</ID>
+      <Name>Travel Tier</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c4f678b6-0f40-42ed-b41e-84be5dcbea47">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="77df0b8b-dfad-4040-9d20-47c85879a794">
+            <TableID>dbo_DimPassenger</TableID>
+            <ColumnID>travel_tier</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2421e94b-cc2f-49c8-b10a-5b3562e71b6a">
+      <ID>Is Current</ID>
+      <Name>Is Current</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dae555fc-9fe0-493a-b72c-d982fa5e48fb">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d509702b-293e-45be-ae43-647ce70a20c2">
+            <TableID>dbo_DimPassenger</TableID>
+            <ColumnID>is_current</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="dc0acc1d-2cf2-4525-9de9-6b3fd749b237">
+      <ID>Effective Date</ID>
+      <Name>Effective Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="37521744-9d47-408d-99a6-9c70d090a558">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fd3df6b4-e599-41fe-b4d9-4f0c6fd658fe">
+            <TableID>dbo_DimPassenger</TableID>
+            <ColumnID>effective_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="68520b9f-c336-4bab-884a-6bf8b100c15d">
+      <ID>Expiry Date</ID>
+      <Name>Expiry Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="02b6ed2d-ea25-459e-92fd-77f5279ba976">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1de2291f-0f10-4c03-ba1b-a2f30bb7b95c">
+            <TableID>dbo_DimPassenger</TableID>
+            <ColumnID>expiry_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
